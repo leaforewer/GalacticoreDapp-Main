@@ -1,14 +1,34 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import "./moralis.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+// import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import { MoralisProvider } from "react-moralis";
+import { BrowserRouter} from "react-router-dom";
+
+// const theme = extendTheme({
+//   config: {
+//     initialColorMode: "dark",
+//     useSystemColorMode: false,
+//   },
+// });
+
+const appId = "01ASI6PuLbcTooK4dIej8b6JbGnfcNKhwsRFiCbW";
+const serverUrl = "https://jhbhk3g0cq0u.usemoralis.com:2053/server";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MoralisProvider appId={appId} serverUrl={serverUrl}>
+      {/* <ChakraProvider theme={theme}> */}
+        <BrowserRouter>
+            <App/>
+        </BrowserRouter>
+      {/* </ChakraProvider> */}
+    </MoralisProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
