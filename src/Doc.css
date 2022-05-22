@@ -1,0 +1,132 @@
+#documentation {
+  overflow-x: hidden;
+  background-color: #1e1e1e;
+  height: 100vh;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+.doc-nav {
+  border-bottom: 1px solid rgba(237, 239, 244, 0.1);
+  padding: 1rem 0rem;
+  background-color: #1e1e1e;
+}
+.navbar-brand img {
+  display: inline-block;
+  max-height: 3rem;
+  margin: 0rem 0.5rem;
+}
+.navbar-brand a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  text-align: start;
+  color: #fff;
+  font-family: 'Chakra Petch', sans-serif;
+}
+.navbar-brand {
+  align-items: center;
+  font-size: 1.5rem;
+  margin-right: 5rem;
+}
+
+.bxl-twitter {
+  font-size: 1.2rem;
+  background: rgba(95, 160, 255);
+  color: #1e1e1e;
+  border-radius: 3px;
+}
+
+.bxl-discord {
+  font-size: 1.5rem;
+}
+.bx {
+  margin: 0rem 0.2rem;
+}
+
+.doc-nav-link:hover {
+  opacity: 0.7;
+  transition: 0.3s ease;
+}
+
+.doc-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(95, 160, 255);
+}
+
+.navbar-doc-nav {
+  border-left: 1px solid rgba(237, 239, 244, 0.2);
+  padding: 0rem 0rem 0rem 3rem;
+}
+
+.nav-desc {
+  background: #fefefe;
+  border: 1px solid #cbcbcb;
+  color: #41415b;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0rem 0.2rem;
+  margin: 0rem 0.5rem;
+}
+#sidebar {
+  min-height: 100vh;
+  position: fixed;
+  left: 0;
+  height: 100%;
+  background: rgba(34, 34, 34);
+  padding: 2rem 0.5rem 1rem 0.5rem;
+}
+.doc-link {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.doc-link i {
+  font-size: 1.2rem;
+  margin: 0rem 0.4rem;
+  background-color: rgb(84, 142, 228);
+  padding: 0.15rem;
+  border-radius: 5px;
+  text-align: center;
+}
+.doc-link:hover{
+    color: #fff !important;
+    transition: 0.2s all;
+    background-color: rgb(84, 142, 228);
+}
+
+.doc-side-nav {
+  text-align: start;
+  font-size: 1rem;
+}
+#doc-main {
+  margin-top: 4.9%;
+}
+.doc-content {
+  height: 100%;
+  width: 100%;
+  padding: 2rem 7rem;
+  border-right: 1px solid rgba(237, 239, 244, 0.1);
+}
+.doc-content section {
+  padding-top: 13%;
+  margin-top: -6%;
+  height: 100vh;
+  width: 100%;
+  text-align: start;
+}
+
+.doc-content section h2 {
+  font-weight: 600;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+.doc-content section p {
+  font-size: 1.1rem;
+  color: rgba(189, 189, 189);
+}
+#footer{
+    position: relative;
+}

@@ -8,9 +8,6 @@ html {
 }
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(
@@ -232,7 +229,7 @@ code {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .home-img {
@@ -338,6 +335,8 @@ code {
   position: absolute;
   z-index: 2;
   width: -webkit-fill-available;
+  top: 0;
+  left: 0;
 }
 
 .char-1 {
@@ -362,7 +361,7 @@ code {
 
 .char-3 {
   animation: moveChar 2.4s ease-in-out infinite;
-  top: 15px;
+  top: 10px;
 }
 
 @keyframes moveChar {
@@ -1111,7 +1110,7 @@ code {
 
 .footer-right {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -1400,6 +1399,9 @@ li {
 }
 
 @media screen and (max-width: 990px) {
+  .mint-profile{
+    display: none !important;
+  }
   .bio-content {
     text-align: center;
   }
@@ -1514,6 +1516,12 @@ li {
   .team-card {
     padding: 1em;
     margin: 2em 0em;
+  }
+  .topnav li{
+    padding: 0px 5px;
+  }
+  .social-link-nav{
+    margin: 0.25rem;
   }
 }
 
@@ -1700,15 +1708,15 @@ li {
     width: 200%;
   }
   .char-1 {
-    position: absolute;
     z-index: 2;
     width: 115%;
-    bottom: 12.5%;
+    top: 23%;
     left: 10%;
   }
   .shadow-1 {
     left: 37.3%;
     bottom: 30%;
+    z-index: 1;
   }
   .char-2 {
     display: none;
@@ -1856,7 +1864,7 @@ li {
 }
 @media screen and (max-width: 480px) {
   .char-1 {
-    bottom: 14.3%;
+    top: 28%;
     left: 10.5%;
   }
   .home-page-button {
@@ -1864,6 +1872,12 @@ li {
   }
 }
 @media screen and (max-width: 440px) {
+  .topnav li{
+    padding: 0px 5px;
+  }
+  .icon{
+    margin-right: 0;
+  }
   .shadow-1 {
     width: 75px;
   }
@@ -1962,7 +1976,7 @@ li {
   }
 
   .s-mbl-left {
-    justify-content: start !important;
+    justify-content: flex-start !important;
   }
   #team {
     align-items: normal;

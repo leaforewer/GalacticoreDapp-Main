@@ -1,5 +1,7 @@
 import React from "react";
 import Typical from "react-typical";
+import { Link } from "react-router-dom";
+import { Fade } from "react-awesome-reveal";
 import galacticoreImg from "./images/Nav/Galacticore-logotext.png";
 import homeMainImg from "./images/Home/home-page-main.png";
 import homemblMainImg from "./images/Home/mobile-home.png";
@@ -14,6 +16,10 @@ import aboutImg from "./images/Team/nft-about.jpg";
 import founder1 from "./images/Team/f2.png";
 import founder2 from "./images/Team/f1.png";
 import artist from "./images/Team/artist.png";
+import collabman1 from "./images/Team/collabman1.png";
+import collabman2 from "./images/Team/collabman2.png";
+import comman from "./images/Team/comman.png";
+import marketingman from "./images/Team/marketingman.png";
 
 import { useState } from "react";
 function Home() {
@@ -38,12 +44,20 @@ function Home() {
                       className="logo d-flex align-items-center"
                     >
                       <div className="navHead">
-                        <img src={galacticoreImg} alt="Galacticore-Logotext" />
+                        <img
+                          loading="lazy"
+                          src={galacticoreImg}
+                          alt="Galacticore-Logotext"
+                        />
                       </div>
                     </a>
                     <div className="social-link dsktp-d-none">
                       <div className="social-link-nav" id="discord">
-                        <a href="https://discord.gg/7AZVkfEASb">
+                        <a
+                          href="https://discord.gg/qfvsNag6rj"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="currentColor"
@@ -55,7 +69,11 @@ function Home() {
                         </a>
                       </div>
                       <div className="social-link-nav" id="twitter">
-                        <a href="https://twitter.com/GalacticoreNFT">
+                        <a
+                          href="https://twitter.com/GalacticoreNFT"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="currentColor"
@@ -67,7 +85,11 @@ function Home() {
                         </a>
                       </div>
                       <div className="social-link-nav" id="kalao">
-                        <a href="https://marketplace.kalao.io/">
+                        <a
+                          href="https://marketplace.kalao.io/"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <div className="kalao-scale">
                             <div className="kalao"></div>
                           </div>
@@ -81,32 +103,53 @@ function Home() {
                       className={isActive ? null : "navbar-toggler-mobile"}
                       id="NavItems"
                     >
-                      <ul className="navbar-nav my-auto topnav">
-                        <li className="nav-item" onClick={handleToggle}>
-                          <a href="#about" id="nav-link" className="nav-link">
-                            About
-                          </a>
-                        </li>
-                        <li className="nav-item" onClick={handleToggle}>
-                          <a href="#roadmap" id="nav-link" className="nav-link">
-                            Roadmap
-                          </a>
-                        </li>
-                        <li className="nav-item" onClick={handleToggle}>
-                          <a href="#team" id="nav-link" className="nav-link">
-                            Team
-                          </a>
-                        </li>
-                        <li className="nav-item" onClick={handleToggle}>
-                          <a href="#faq" id="nav-link" className="nav-link">
-                            f.a.q
-                          </a>
-                        </li>
-                      </ul>
+                      <Fade triggerOnce="true">
+                        <ul className="navbar-nav my-auto topnav">
+                          <li className="nav-item" onClick={handleToggle}>
+                            <a href="#about" id="nav-link" className="nav-link">
+                              About
+                            </a>
+                          </li>
+                          <li className="nav-item" onClick={handleToggle}>
+                            <a
+                              href="#roadmap"
+                              id="nav-link"
+                              className="nav-link"
+                            >
+                              Roadmap
+                            </a>
+                          </li>
+                          <li className="nav-item" onClick={handleToggle}>
+                            <a
+                              href="https://docs.galacticore-nft.com/"
+                              target="_blank"
+                              rel="noreferrer"
+                              id="nav-link"
+                              className="nav-link"
+                            >
+                              White Paper
+                            </a>
+                          </li>
+                          <li className="nav-item" onClick={handleToggle}>
+                            <a href="#team" id="nav-link" className="nav-link">
+                              Team
+                            </a>
+                          </li>
+                          <li className="nav-item" onClick={handleToggle}>
+                            <a href="#faq" id="nav-link" className="nav-link">
+                              f.a.q
+                            </a>
+                          </li>
+                        </ul>
+                      </Fade>
                     </div>
                     <div className="social-link mbl-d-none">
                       <div className="social-link-nav" id="discord">
-                        <a href="https://discord.gg/7AZVkfEASb">
+                        <a
+                          href="https://discord.gg/qfvsNag6rj"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="currentColor"
@@ -118,7 +161,11 @@ function Home() {
                         </a>
                       </div>
                       <div className="social-link-nav" id="twitter">
-                        <a href="https://twitter.com/GalacticoreNFT">
+                        <a
+                          href="https://twitter.com/GalacticoreNFT"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="currentColor"
@@ -130,7 +177,11 @@ function Home() {
                         </a>
                       </div>
                       <div className="social-link-nav" id="kalao">
-                        <a href="https://marketplace.kalao.io/">
+                        <a
+                          href="https://marketplace.kalao.io/"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <div className="kalao-scale">
                             <div className="kalao"></div>
                           </div>
@@ -151,39 +202,50 @@ function Home() {
               <div id="home" className="home-main">
                 <div className="home-page-img">
                   <img
+                    loading="lazy"
                     className="home-img"
                     alt="homeMainImg"
                     src={homeMainImg}
                   />
                   <img
+                    loading="lazy"
                     className="home-img-mbl"
                     src={homemblMainImg}
                     alt="Home-Mobile-Img"
                   />
-                  <img
-                    className="home-chars char-1"
-                    alt="homeMainAst1"
-                    src={homeMainAst1}
-                  />
+                  <Fade triggerOnce="true">
+                    <img
+                      loading="lazy"
+                      className="home-chars char-1"
+                      alt="homeMainAst1"
+                      src={homeMainAst1}
+                    />
+                  </Fade>
                   <div className="shadow-1"></div>
                   <div className="bullet-1"></div>
                   <div className="bullet-2"></div>
                   <div className="bullet-3"></div>
-                  <img
-                    className="home-chars char-2"
-                    alt="homeMainAst2"
-                    src={homeMainAst2}
-                  />
+                  <Fade triggerOnce="true">
+                    <img
+                      loading="lazy"
+                      className="home-chars char-2"
+                      alt="homeMainAst2"
+                      src={homeMainAst2}
+                    />
+                  </Fade>
                   <div className="shadow-2"></div>
-                  <img
-                    className="home-chars char-3"
-                    alt="homeMainAst3"
-                    src={homeMainAst3}
-                  />
+                  <Fade triggerOnce="true">
+                    <img
+                      loading="lazy"
+                      className="home-chars char-3"
+                      alt="homeMainAst3"
+                      src={homeMainAst3}
+                    />
+                  </Fade>
                   <div className="shadow-3"></div>
-                  <a href="index.html/mint">
+                  <Link to="/mint">
                     <div className="home-page-button"></div>
-                  </a>
+                  </Link>
                 </div>
               </div>
               {/* About */}
@@ -191,47 +253,73 @@ function Home() {
                 <div className="about-main container-fluid">
                   <div className="row">
                     <div className="col-12">
-                      <div className="bio-head">
-                        <h2>
-                          <Typical
-                            steps={["Who is", 2500, "Wer ist", 2500, "Wie is", 2500, "谁是", 2500, "Qui est", 2500, "الذي هو", 2500, "Кто", 2500]}
-                            loop={Infinity}
-                            wrapper="div"
-                          />
-                          GalacticOre?
-                        </h2>
-                      </div>
+                      <Fade triggerOnce="true" direction="up">
+                        <div className="bio-head">
+                          <h2>
+                            <Typical
+                              steps={[
+                                "Who is",
+                                2500,
+                                "Wer ist",
+                                2500,
+                                "Wie is",
+                                2500,
+                                "谁是",
+                                2500,
+                                "Qui est",
+                                2500,
+                                "الذي هو",
+                                2500,
+                                "Кто",
+                                2500,
+                              ]}
+                              loop={Infinity}
+                              wrapper="div"
+                            />
+                            GalacticOre?
+                          </h2>
+                        </div>
+                      </Fade>
                       <div className="row bio-main">
                         <div className="col-lg-6 col-sm-12 bio-content-main">
-                          <div className=" bio-content">
-                            <div>
-                              Galacticore is a mining-based{" "}
-                              <span className="mark">#PlayAndEarn</span> game
-                              which is planned to be released in{" "}
-                              <span className="date-font">Q1 2023</span>. Before
-                              the game's release, it was released as a NFT
-                              series of the game. These NFTs will be used in our
-                              future games.
+                          <Fade triggerOnce="true" direction="left">
+                            <div className=" bio-content">
+                              <div>
+                                Galacticore is a mining-based{" "}
+                                <span className="mark">#PlayAndEarn</span> game
+                                which is planned to be released in{" "}
+                                <span className="date-font">Q1 2023</span>.
+                                Before the game's release, it was released as a
+                                NFT series of the game. These NFTs will be used
+                                in our future games.
+                              </div>
+                              <div>
+                                These NFTs are generally for{" "}
+                                <span className="mark">rewarding</span> and
+                                building a{" "}
+                                <span className="mark">community</span> before
+                                the actual game launch.
+                              </div>
+                              <div>
+                                We built these NFTs as
+                                <span className="mark">perfect</span> as
+                                possible to also let them to be used as{" "}
+                                <span className="mark">avatars</span> for the
+                                buyers.
+                              </div>
                             </div>
-                            <div>
-                              These NFTs are generally for{" "}
-                              <span className="mark">rewarding</span> and
-                              building a <span className="mark">community</span>{" "}
-                              before the actual game launch.
-                            </div>
-                            <div>
-                              We built these NFTs as
-                              <span className="mark">perfect</span> as possible
-                              to also let them to be used as{" "}
-                              <span className="mark">avatars</span> for the
-                              buyers.
-                            </div>
-                          </div>
+                          </Fade>
                         </div>
                         <div className="col-lg-6 col-sm-12 center-center mbl-d-none tblt-d-none">
-                          <div className="bio-img">
-                            <img src={aboutImg} alt="AboutImage" />
-                          </div>
+                          <Fade triggerOnce="true" direction="right">
+                            <div className="bio-img">
+                              <img
+                                loading="lazy"
+                                src={aboutImg}
+                                alt="AboutImage"
+                              />
+                            </div>
+                          </Fade>
                         </div>
                       </div>
                     </div>
@@ -242,45 +330,52 @@ function Home() {
               <div id="roadmap" className="roadmap-main container">
                 <div className="row w-100">
                   <div className="col-12">
-                    <div className="roadmap-main-head">
-                      <svg className="svg-mbl" viewBox="0 0 10 2">
-                        <text
-                          x="5"
-                          y="1"
-                          textAnchor="middle"
-                          fontSize="1"
-                          fill="none"
-                          strokeWidth=".01"
-                          stroke="#33c8ff"
-                          fontFamily="Righteous"
-                        >
-                          ROADMAP
-                        </text>
-                      </svg>
-                    </div>
-                    <div className="roadmap-header svg-dsk">
-                      <div className="head"></div>
-                    </div>
+                    <Fade triggerOnce="true">
+                      <div className="roadmap-main-head">
+                        <svg className="svg-mbl" viewBox="0 0 10 2">
+                          <text
+                            x="5"
+                            y="1"
+                            textAnchor="middle"
+                            fontSize="1"
+                            fill="none"
+                            strokeWidth=".01"
+                            stroke="#33c8ff"
+                            fontFamily="Righteous"
+                          >
+                            ROADMAP
+                          </text>
+                        </svg>
+                      </div>
+                    </Fade>
+                    <Fade triggerOnce="true">
+                      <div className="roadmap-header svg-dsk">
+                        <div className="head"></div>
+                      </div>
+                    </Fade>
                     <div className="row">
                       <div className="col-lg-6 col-sm-12">
-                        <div className="roadmap-content-left">
-                          <span className="roadmap-periodes">Q2 2022</span>
-                          <div className="roadmap-head">
-                            RELEASE OF FIRST NFT SERIES
-                            <br /> REWARD CLAIMS FOR NFT HOLDERS COMMUNITY
-                            COMPETITIONS
-                            <br /> HOLDER TIERS
+                        <Fade triggerOnce="true" direction="left">
+                          <div className="roadmap-content-left">
+                            <span className="roadmap-periodes">Q2 2022</span>
+                            <div className="roadmap-head">
+                              RELEASE OF FIRST NFT SERIES
+                              <br /> REWARD CLAIMS FOR NFT HOLDERS COMMUNITY
+                              COMPETITIONS
+                              <br /> HOLDER TIERS
+                            </div>
+                            <div className="roadmap-context">
+                              Beginning of the journey for all Galactic
+                              warriors. Mint Galacticore NFTs to help us take
+                              out danger out of this solar system!
+                            </div>
                           </div>
-                          <div className="roadmap-context">
-                            Beginning of the journey for all Galactic warriors.
-                            Mint Galacticore NFTs to help us take out danger out
-                            of this solar system!
-                          </div>
-                        </div>
+                        </Fade>
                       </div>
                       <div className="col-lg-6 col-sm-12 d-flex justify-content-center">
                         <div className="planet-1">
                           <img
+                            loading="lazy"
                             width={310}
                             alt="RoadmapPlanet-1"
                             src={roadmapPlanet1}
@@ -296,6 +391,7 @@ function Home() {
                       <div className="col-lg-6 col-sm-12 d-flex justify-content-center align-items-center">
                         <div className="planet-2">
                           <img
+                            loading="lazy"
                             width={310}
                             alt="RoadmapPlanet-2"
                             src={roadmapPlanet2}
@@ -306,41 +402,46 @@ function Home() {
                         </div>
                       </div>
                       <div className="col-lg-6 col-sm-12">
-                        <div className="roadmap-content-right">
-                          <span className="roadmap-periodes">Q3 2022</span>
-                          <div className="roadmap-head">
-                            STARTUP PLAY <span className="amp">&</span> EARN
-                            GAME
-                            <br /> TOKEN LAUNCH
-                            <br /> DAILY TOKEN REWARDS
-                            <br />
-                            TOURNAMENTS <span className="amp">&</span> BETS
+                        <Fade triggerOnce="true" direction="right">
+                          <div className="roadmap-content-right">
+                            <span className="roadmap-periodes">Q3 2022</span>
+                            <div className="roadmap-head">
+                              STARTUP PLAY <span className="amp">&</span> EARN
+                              GAME
+                              <br /> TOKEN LAUNCH
+                              <br /> DAILY TOKEN REWARDS
+                              <br />
+                              TOURNAMENTS <span className="amp">&</span> BETS
+                            </div>
+                            <div className="roadmap-context">
+                              Our base 'Galactic Warriors' will be protected
+                              from raiders. In our hub there will be
+                              tournaments, bets and lots of enjoy.
+                            </div>
                           </div>
-                          <div className="roadmap-context">
-                            Our base 'Galactic Warriors' will be protected from
-                            raiders. In our hub there will be tournaments, bets
-                            and lots of enjoy.
-                          </div>
-                        </div>
+                        </Fade>
                       </div>
                       <div className="col-lg-6 col-sm-12 d-flex align-items-center">
-                        <div className="roadmap-content-left q4">
-                          <span className="roadmap-periodes">Q4 2022</span>
-                          <div className="roadmap-head">
-                            LAUNCH OF P2E MINI GAME
-                            <br />
-                            PRE SEASON BEFORE FULL GAME
+                        <Fade triggerOnce="true" direction="left">
+                          <div className="roadmap-content-left q4">
+                            <span className="roadmap-periodes">Q4 2022</span>
+                            <div className="roadmap-head">
+                              LAUNCH OF P2E MINI GAME
+                              <br />
+                              PRE SEASON BEFORE FULL GAME
+                            </div>
+                            <div className="roadmap-context">
+                              WAGMI as Galactic Warriors! As you play thorughout
+                              our game, you will be finding extra ordinary Ores
+                              for each milestone you get in our solar system.
+                            </div>
                           </div>
-                          <div className="roadmap-context">
-                            WAGMI as Galactic Warriors! As you play thorughout
-                            our game, you will be finding extra ordinary Ores
-                            for each milestone you get in our solar system.
-                          </div>
-                        </div>
+                        </Fade>
                       </div>
                       <div className="col-lg-6 col-sm-12 d-flex justify-content-center align-items-center">
                         <div className="planet-3">
                           <img
+                            loading="lazy"
                             width={550}
                             alt="RoadmapPlanet-3"
                             src={roadmapPlanet3}
@@ -353,6 +454,7 @@ function Home() {
                       <div className="col-lg-6 col-sm-12 d-flex justify-content-center align-items-center">
                         <div className="planet-4">
                           <img
+                            loading="lazy"
                             width={310}
                             alt="RoadmapPlanet-4"
                             src={roadmapPlanet4}
@@ -360,20 +462,22 @@ function Home() {
                         </div>
                       </div>
                       <div className="col-lg-6 col-sm-12">
-                        <div className="roadmap-content-right">
-                          <span className="roadmap-periodes">Q1 2023</span>
-                          <div className="roadmap-head">
-                            LAUNCH OF NEW P2E GAME
-                            <br />
-                            TOKEN REWARDS IN-GAME
+                        <Fade triggerOnce="true" direction="right">
+                          <div className="roadmap-content-right">
+                            <span className="roadmap-periodes">Q1 2023</span>
+                            <div className="roadmap-head">
+                              LAUNCH OF NEW P2E GAME
+                              <br />
+                              TOKEN REWARDS IN-GAME
+                            </div>
+                            <div className="roadmap-context">
+                              Biggest milestone of a new journey for Galactic
+                              Warriors. We will be launching our full P2E game
+                              to the public. With more gamemodes you gain more
+                              than you can imagine!
+                            </div>
                           </div>
-                          <div className="roadmap-context">
-                            Biggest milestone of a new journey for Galactic
-                            Warriors. We will be launching our full P2E game to
-                            the public. With more gamemodes you gain more than
-                            you can imagine!
-                          </div>
-                        </div>
+                        </Fade>
                       </div>
                     </div>
                   </div>
@@ -387,55 +491,139 @@ function Home() {
                       <div className="col-12">
                         <div className="row">
                           <div className="col-12">
-                            <div className="team-head">
-                              <svg viewBox="0 0 10 2">
-                                <text
-                                  x="5"
-                                  y="1"
-                                  textAnchor="middle"
-                                  fontSize="1"
-                                  fill="none"
-                                  strokeWidth=".01"
-                                  stroke="#33c8ff"
-                                  fontFamily="Righteous"
-                                >
-                                  TEAM
-                                </text>
-                              </svg>
-                            </div>
+                            <Fade triggerOnce="true">
+                              <div className="team-head">
+                                <svg viewBox="0 0 10 2">
+                                  <text
+                                    x="5"
+                                    y="1"
+                                    textAnchor="middle"
+                                    fontSize="1"
+                                    fill="none"
+                                    strokeWidth=".01"
+                                    stroke="#33c8ff"
+                                    fontFamily="Righteous"
+                                  >
+                                    TEAM
+                                  </text>
+                                </svg>
+                              </div>
+                            </Fade>
                           </div>
-                          <div className="team-card col-lg-6 col-sm-12 s-mbl-right">
-                            <div className="team-bio-img">
-                              <img src={founder1} alt="Founder" />
-                            </div>
-                            <div className="team-name">
-                              <h4>Leaforever</h4>
-                            </div>
-                            <div className="team-position">
-                              <h5>CO-Founder</h5>
-                            </div>
+                          <div className="team-card my-5 col-lg-6 col-sm-12 s-mbl-right">
+                            <Fade triggerOnce="true">
+                              <div className="team-bio-img">
+                                <img
+                                  loading="lazy"
+                                  src={founder1}
+                                  alt="Founder"
+                                />
+                              </div>
+                              <div className="team-name">
+                                <h4>Leaforever</h4>
+                              </div>
+                              <div className="team-position">
+                                <h5>CO-Founder</h5>
+                              </div>
+                            </Fade>
                           </div>
-                          <div className=" team-card col-lg-6 col-sm-12 s-mbl-left">
-                            <div className="team-bio-img">
-                              <img src={founder2} alt="Founder" />
-                            </div>
-                            <div className="team-name">
-                              <h4>Ferrosia</h4>
-                            </div>
-                            <div className="team-position">
-                              <h5>CO-Founder</h5>
-                            </div>
+                          <div className=" team-card my-5 col-lg-6 col-sm-12 s-mbl-left">
+                            <Fade triggerOnce="true">
+                              <div className="team-bio-img">
+                                <img
+                                  loading="lazy"
+                                  src={founder2}
+                                  alt="Founder"
+                                />
+                              </div>
+                              <div className="team-name">
+                                <h4>Ferrosia</h4>
+                              </div>
+                              <div className="team-position">
+                                <h5>CO-Founder</h5>
+                              </div>
+                            </Fade>
                           </div>
-                          <div className="team-card col-lg-12 col-sm-12">
-                            <div className="team-bio-img">
-                              <img src={artist} alt="Artist" />
-                            </div>
-                            <div className="team-name">
-                              <h4>Fliyingcat</h4>
-                            </div>
-                            <div className="team-position">
-                              <h5>Artist</h5>
-                            </div>
+                          <div className="team-card my-5 col-lg-6 col-sm-12 s-mbl-right">
+                            <Fade triggerOnce="true">
+                              <div className="team-bio-img">
+                                <img loading="lazy" src={artist} alt="Artist" />
+                              </div>
+                              <div className="team-name">
+                                <h4>Fliyingcat</h4>
+                              </div>
+                              <div className="team-position">
+                                <h5>Artist</h5>
+                              </div>
+                            </Fade>
+                          </div>
+                          <div className="team-card my-5 col-lg-6 col-sm-12 s-mbl-left">
+                            <Fade triggerOnce="true">
+                              <div className="team-bio-img">
+                                <img
+                                  loading="lazy"
+                                  src={marketingman}
+                                  alt="Marketing manager"
+                                />
+                              </div>
+                              <div className="team-name">
+                                <h4>Achilles</h4>
+                              </div>
+                              <div className="team-position">
+                                <h5>Marketting Manager</h5>
+                              </div>
+                            </Fade>
+                          </div>
+                          <div className="team-card my-5 col-lg-6 col-sm-12 s-mbl-right">
+                            <Fade triggerOnce="true">
+                              <div className="team-bio-img">
+                                <img
+                                  loading="lazy"
+                                  src={comman}
+                                  alt="Community manager"
+                                />
+                              </div>
+                              <div className="team-name">
+                                <h4>Azumithal</h4>
+                              </div>
+                              <div className="team-position">
+                                <h5>Community Manager</h5>
+                              </div>
+                            </Fade>
+                          </div>
+                          <div className="team-card my-5 col-lg-6 col-sm-12 s-mbl-left">
+                            <Fade triggerOnce="true">
+                              <div className="team-bio-img">
+                                <img
+                                  loading="lazy"
+                                  src={collabman1}
+                                  alt="Collab manager"
+                                />
+                              </div>
+                              <div className="team-name">
+                                <h4>Kyra</h4>
+                              </div>
+                              <div className="team-position">
+                                <h5>Collab Manager</h5>
+                              </div>
+                            </Fade>
+                          </div>
+                          <div className="team-card my-5 col-lg-12 col-sm-12 s-mbl-right">
+                            <Fade triggerOnce="true">
+                              <div className="team-bio-img">
+                                <img
+                                  loading="lazy"
+                                  src={collabman2}
+                                  alt="Collab manager"
+                                />
+                              </div>
+                              <div className="team-name">
+                                <h4>poohdini22</h4>
+                              </div>
+                              <div className="team-position">
+                                <h5>Collab Manager</h5>
+                              </div>
+                            </Fade>
                           </div>
                           <div className="col-lg-12">
                             <div className="row justify-content-center">
@@ -447,6 +635,8 @@ function Home() {
                                     <a
                                       className="email-link"
                                       href="mailto:galacticore.info@gmail.com"
+                                      target="_blank"
+                                      rel="noreferrer"
                                     >
                                       galacticore.info@gmail.com
                                     </a>
@@ -455,7 +645,11 @@ function Home() {
                                     Or Contact us with{" "}
                                     <div className="join-links">
                                       <div className="join-discord">
-                                        <a href="https://discord.gg/7AZVkfEASb">
+                                        <a
+                                          href="https://discord.gg/qfvsNag6rj"
+                                          target="_blank"
+                                          rel="noreferrer"
+                                        >
                                           <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             fill="currentColor"
@@ -468,7 +662,11 @@ function Home() {
                                       </div>{" "}
                                       <span className="amp-join">&</span>
                                       <div className="join-twitter">
-                                        <a href="https://twitter.com/GalacticoreNFT">
+                                        <a
+                                          href="https://twitter.com/GalacticoreNFT"
+                                          target="_blank"
+                                          rel="noreferrer"
+                                        >
                                           <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             fill="currentColor"
@@ -663,6 +861,7 @@ function Home() {
                         <li className="footer-logo">
                           {" "}
                           <img
+                            loading="lazy"
                             src={galacticoreImg}
                             alt="Galacticore-Logotext"
                           />
@@ -677,7 +876,9 @@ function Home() {
                         <li>
                           <a
                             className="footer-link"
-                            href="https://discord.gg/7AZVkfEASb"
+                            href="https://discord.gg/qfvsNag6rj"
+                            target="_blank"
+                            rel="noreferrer"
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -693,6 +894,8 @@ function Home() {
                           <a
                             className="footer-link"
                             href="https://twitter.com/GalacticoreNFT"
+                            target="_blank"
+                            rel="noreferrer"
                           >
                             {" "}
                             <svg
@@ -706,7 +909,11 @@ function Home() {
                           </a>
                         </li>
                         <li className="footer-link">
-                          <a href="https://marketplace.kalao.io/">
+                          <a
+                            href="https://marketplace.kalao.io/"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
                             <div className="kalao"></div>
                           </a>
                         </li>
