@@ -15,18 +15,22 @@
     width: 100% !important;
   }
 }
-
 body::-webkit-scrollbar {
-  background-color: #282c34;
-  width: 10px;
+  width: 8px;
+  height: 8px;
 }
- 
 body::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
- 
-body::-webkit-scrollbar-thumb {
-  background-color: #2b7fcb;
-  outline: 1px solid #282c34;
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #dfdfdf;
+  border-radius: 10px;
+}
+body{
+  cursor: url("./components/images/Cursor/default-cursor.png"), auto;
+
+}
+a:hover{
+  cursor: url("./components/images/Cursor/hover-cursor1.png"), auto;
 }

@@ -1,0 +1,152 @@
+.Split-landing {
+  --side-wigth-1: 70%;
+  --side-wigth-2: 30%;
+  --side-brightness-1: 1;
+  --side-brightness-2: 0.5;
+  --z-index-1: 2;
+  --z-index-2: 1;
+  --wrap-scale-1: 1.1;
+  --wrap-scale-2: 0.9;
+  position: relative;
+  height: 100vh;
+  background: transparent;
+  font-family: "Chakra Petch", serif;
+  overflow: hidden;
+}
+.Split-landing .side {
+  position: absolute;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.Split-landing .side:nth-of-type(1) {
+  background: url("./images/SplitPage/bg-2.png") center/cover no-repeat;
+  left: 0;
+  width: var(--side-wigth-1);
+  z-index: var(--z-index-1);
+  filter: brightness(var(--side-brightness-1));
+  transition: all 0.5s ease 0.1s;
+}
+.Split-landing .side:nth-of-type(1) h1,
+.Split-landing .side:nth-of-type(1) .btn {
+  transform: scale(var(--wrap-scale-1));
+  transition: transform 0.5s ease 0.1s;
+}
+.Split-landing .side:nth-of-type(2) {
+  background: url("./images/SplitPage/bg-1.png") center/cover no-repeat;
+  left: calc(100% - var(--side-wigth-2));
+  width: var(--side-wigth-2);
+  z-index: var(--z-index-2);
+  filter: brightness(var(--side-brightness-2));
+  transition: all 0.5s ease 0.1s;
+}
+.Split-landing .side:nth-of-type(2) h1,
+.Split-landing .side:nth-of-type(2) .btn {
+  transform: scale(var(--wrap-scale-2));
+  transition: transform 0.5s ease 0.1s;
+}
+.Split-landing .side .wrap {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0;
+  background: transparent;
+}
+.Split-landing .side .wrap h1 {
+  margin-bottom: 0.65rem;
+  transform-origin: center bottom;
+  text-align: center;
+  white-space: nowrap;
+}
+.Split-landing .side .wrap .btn {
+  display: inline-block;
+  position: relative;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0);
+  border: 0.1rem solid #fff;
+  border-radius: 0;
+  font-size: 12pt;
+  font-weight: 500;
+  color: #d4d4d4;
+  user-select: none;
+  cursor: pointer;
+  text-align: center;
+  transition: all 1s ease;
+}
+.Split-landing .side .wrap .btn:hover {
+  background: #d4d4d4;
+  color: #121212;
+}
+.Split-landing .side .wrap .btn a,
+.Split-landing .side .wrap .btn a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.galacticore-player img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  padding: 20px;
+  -webkit-animation: rotate-vert-center 3s
+    cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
+  animation: rotate-vert-center 3s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+    infinite both;
+}
+
+.back-ico{
+  position: fixed;
+  left: 5px;
+  top: 5px;
+  z-index: 5;
+}
+.back-ico a i{
+  font-size: 2rem;
+  color: #fff;
+  transition: 0.3s all ease;
+}
+.back-ico a i:hover{
+  color: #cbcbcb;
+}
+
+@-webkit-keyframes rotate-vert-center {
+  0% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+@keyframes rotate-vert-center {
+  0% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Split-landing .side .wrap h1 {
+    font-size: 1.15rem;
+  }
+  .galacticore-player img {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .galacticore-player img {
+    width: 120px;
+  }
+}
+
